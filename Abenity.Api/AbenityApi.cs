@@ -48,7 +48,7 @@ namespace Abenity.Api
         {
             _apiCredential = apiCredential;
             _clientKeys = clientKeys;
-            _apiUrl = (useProduction) ? "https://api.abenity.com/v1/client/sso_member.json" : "https://sandbox.abenity.com/v1/client/sso_member.json";
+            _apiUrl = (useProduction) ? "https://api.abenity.com/v2/client/sso_member.json" : "https://sandbox.abenity.com/v2/client/sso_member.json";
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace Abenity.Api
 
         private string EncryptPayloadWithDES(string message)
         {
-            // Uses CBC by default. 
+            // Uses CBC by default.
             // https://msdn.microsoft.com/en-us/library/system.security.cryptography.symmetricalgorithm.mode(v=vs.110).aspx
             var des = new TripleDESCryptoServiceProvider();
 
